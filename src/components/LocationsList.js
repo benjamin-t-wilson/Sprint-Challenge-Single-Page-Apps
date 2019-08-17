@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import LocationCard from "./LocationCard.js";
+import Header from "./Header.js";
+import TabNav from "./TabNav.js";
 
 export default function LocationsList() {
   // TODO: Add useState to track data from useEffect
@@ -20,10 +22,14 @@ export default function LocationsList() {
   }, []);
 
   return (
-    <section className="location-list grid-view">
-      {locList.map(loc => {
-        return <LocationCard loc={loc} key={loc.id} />;
-      })}
-    </section>
+    <>
+      <Header />
+      <TabNav />
+      <section className="location-list grid-view">
+        {locList.map(loc => {
+          return <LocationCard loc={loc} key={loc.id} />;
+        })}
+      </section>
+    </>
   );
 }

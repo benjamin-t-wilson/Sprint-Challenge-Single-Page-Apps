@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import EpisodesCard from "./EpisodesCard.js";
+import Header from "./Header.js";
+import TabNav from "./TabNav.js";
 
 const EpisodesList = () => {
   const [epiList, setEpiList] = useState([]);
@@ -17,11 +19,15 @@ const EpisodesList = () => {
   }, []);
 
   return (
-    <section className="episode-list grid-view">
-      {epiList.map(ep => {
-        return <EpisodesCard ep={ep} key={ep.id} />;
-      })}
-    </section>
+    <>
+      <Header />
+      <TabNav />
+      <section className="episode-list grid-view">
+        {epiList.map(ep => {
+          return <EpisodesCard ep={ep} key={ep.id} />;
+        })}
+      </section>
+    </>
   );
 };
 
