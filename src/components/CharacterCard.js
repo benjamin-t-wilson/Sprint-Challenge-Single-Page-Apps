@@ -1,5 +1,5 @@
 import React from "react";
-import { css, cx } from "emotion";
+import { css } from "emotion";
 
 export default function CharacterCard(props) {
   const char = props.char;
@@ -16,7 +16,7 @@ export default function CharacterCard(props) {
         width: 40%;
       `}
     >
-      <img src={char.image} />
+      <img src={char.image} alt={`portrait of ${char.name}`}/>
       <h1
         className={css`
           text-align: center;

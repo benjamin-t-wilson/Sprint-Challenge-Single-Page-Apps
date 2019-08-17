@@ -1,5 +1,5 @@
 import React from "react";
-import { css, cx } from "emotion";
+import { css } from "emotion";
 
 export default function LocationCard(props) {
   const loc = props.loc;

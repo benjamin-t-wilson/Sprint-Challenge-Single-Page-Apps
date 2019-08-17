@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { css, cx } from "emotion";
+import { css } from "emotion";
 
 // TODO: Add missing tabs below
 export default function TabNav() {

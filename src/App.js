@@ -2,7 +2,7 @@ import React from "react";
 import TabNav from "./components/TabNav.js";
 import AppRouter from "./components/AppRouter.js";
 import Header from "./components/Header.js";
-import { css, cx } from "emotion";
+import { css } from "emotion";
 
 export default function App() {
   return (
