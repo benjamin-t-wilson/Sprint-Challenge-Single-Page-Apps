@@ -1,8 +1,8 @@
 import React from "react";
 import { css } from "emotion";
 
-export default function LocationCard(props) {
-  const loc = props.loc;
+const EpisodesCard = props => {
+  const ep = props.ep;
   return (
     <div
       className={css`
@@ -21,11 +21,13 @@ export default function LocationCard(props) {
           text-align: center;
         `}
       >
-        {loc.name}
+        {ep.name}
       </h1>
-      <p>Type: {loc.type}</p>
-      <p>Dimension: {loc.dimension}</p>
-      <p>Number of residents: {loc.residents.length}</p>
+      <p>Episode: {ep.episode}</p>
+      <p>Aired: {ep.air_date}</p>
+      <p>Contains {ep.characters.length} characters</p>
     </div>
   );
-}
+};
+
+export default EpisodesCard;
